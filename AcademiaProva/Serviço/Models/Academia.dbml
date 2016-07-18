@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="20131011110029" Class="AcademiaDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=valera;Initial Catalog=20131011110029;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="_20131011110029ConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Matricula" Member="Matriculas">
+    <Type Name="Matricula">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Aluno" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Pacote" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Data" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Association Name="Matricula_Parcela" Member="Parcelas" AccessModifier="Internal" ThisKey="Id" OtherKey="IdMatricula" Type="Parcela" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Parcela" Member="Parcelas">
+    <Type Name="Parcela">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IdMatricula" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Data" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Valor" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Pago" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Association Name="Matricula_Parcela" Member="Matricula" AccessModifier="Internal" ThisKey="IdMatricula" OtherKey="Id" Type="Matricula" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

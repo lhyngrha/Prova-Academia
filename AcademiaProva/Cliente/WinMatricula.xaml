@@ -1,0 +1,36 @@
+﻿<Window x:Class="Cliente.WinMatricula"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Cliente"
+        mc:Ignorable="d"
+        Title="WinMatricula" Height="312.552" Width="547.28">
+    <Grid>
+        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="198" Margin="10,74,0,0" VerticalAlignment="Top" Width="497">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock FontSize="14" Text="{Binding Id}" />
+                        <TextBlock FontSize="14" Text=" - " />
+                        <TextBlock FontSize="14" Text="{Binding Aluno}"/>
+                        <TextBlock FontSize="14" Text=" - " />
+                        <TextBlock FontSize="14" Text="{Binding Pacote}"/>
+                        <TextBlock FontSize="14" Text=" - " />
+                        <TextBlock FontSize="14" Text="{Binding Data}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <TextBox x:Name="txtAluno" HorizontalAlignment="Left" Height="22" Margin="10,10,0,0" TextWrapping="Wrap" Text="Aluno" VerticalAlignment="Top" Width="134"/>
+        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="159,9,0,0" VerticalAlignment="Top" Width="152">
+            <Button Content="Fique Fortinho"/>
+            <Button Content="Fique Forte"/>
+            <Button Cursor="" Content="Fique Fortão"/>
+        </ComboBox>
+        <DatePicker x:Name="data" HorizontalAlignment="Left" Margin="332,10,0,0" VerticalAlignment="Top" Width="160"/>
+        <Button x:Name="btnInsert" Content="Inserir" HorizontalAlignment="Left" Margin="10,42,0,0" VerticalAlignment="Top" Width="75" Click="btnInsert_Click"/>
+        <Button x:Name="button1" Content="Listar" HorizontalAlignment="Left" Margin="101,42,0,0" VerticalAlignment="Top" Width="75" Click="button1_Click"/>
+
+    </Grid>
+</Window>

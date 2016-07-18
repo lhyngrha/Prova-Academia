@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Academia">
+  <DataContextMoniker Name="/AcademiaDataContext" />
+  <nestedChildShapes>
+    <classShape Id="23b4cb4b-7aa5-4745-8792-540fcfa259dc" absoluteBounds="1.75, 1.5, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/AcademiaDataContext/Matricula" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b4522ed0-fca3-410e-b28d-f517bc6d0aea" absoluteBounds="1.7650000000000001, 1.96, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5b588f7a-b41e-4f61-aff3-c27908ec3aa8" absoluteBounds="4.875, 1.375, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/AcademiaDataContext/Parcela" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d0f28191-0e0f-4301-91ff-35f7df83721d" absoluteBounds="4.89, 1.835, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.75 : 2.28929768880208); (4.875 : 2.28929768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/AcademiaDataContext/Matricula/Matricula_Parcela" />
+      <nodes>
+        <classShapeMoniker Id="23b4cb4b-7aa5-4745-8792-540fcfa259dc" />
+        <classShapeMoniker Id="5b588f7a-b41e-4f61-aff3-c27908ec3aa8" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
